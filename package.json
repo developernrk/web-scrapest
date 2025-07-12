@@ -1,0 +1,43 @@
+
+{
+  "name": "webscrapest",
+  "version": "1.0.0",
+  "description": "A Chrome extension for analyzing websites",
+  "author": "nrk navin",
+  "main": "dist/background.js",
+  "scripts": {
+    "build": "webpack --mode=production",
+    "build:debug": "webpack --mode=production --env sourcemap=true",
+    "build:content": "webpack --mode=production --env sourcemap=true --env entry=./src/content.ts --env outputFilename=content.js",
+    "dev": "webpack --watch --mode=development",
+    "start": "webpack serve --mode=development --open",
+    "clean": "rimraf dist",
+    "prebuild": "npm run clean",
+    "prebuild:debug": "npm run clean"
+  },
+  "dependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "classnames": "^2.3.2"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.4",
+    "webpack": "^5.64.4",
+    "webpack-cli": "^4.9.1",
+    "ts-loader": "^9.2.6",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.7.3",
+    "style-loader": "^3.3.1",
+    "postcss": "^8.4.21",
+    "postcss-loader": "^7.0.2",
+    "postcss-preset-env": "^8.0.1",
+    "autoprefixer": "^10.4.14",
+    "tailwindcss": "^3.3.1",
+    "html-webpack-plugin": "^5.5.0",
+    "webpack-dev-server": "^4.11.1",
+    "rimraf": "^4.1.2",
+    "@types/chrome": "^0.0.237",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0"
+  }
+}

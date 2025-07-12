@@ -1,0 +1,179 @@
+
+:root {
+    --primary-color: #4a6cf7;
+    --primary-light: #6b89f9;
+    --primary-dark: #3a5bd9;
+    --secondary-color: #6c757d;
+    --success-color: #28a745;
+    --error-color: #dc3545;
+    --background-color: #f8f9fa;
+    --text-color: #343a40;
+    --border-color: #dee2e6;
+    --tab-inactive: #e9ecef;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    width: 400px;
+    min-height: 300px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: var(--primary-color);
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.subtitle {
+    color: var(--secondary-color);
+    font-size: 14px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.analyze-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    margin-bottom: 20px;
+}
+
+.analyze-btn:hover {
+    background-color: var(--primary-dark);
+}
+
+.analyze-btn:disabled {
+    background-color: var(--secondary-color);
+    cursor: not-allowed;
+}
+
+.error {
+    color: var(--error-color);
+    background-color: rgba(220, 53, 69, 0.1);
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.dev-notice {
+    background-color: #fff3cd;
+    color: #856404;
+    padding: 8px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.results {
+    background-color: #f8f9fa;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    text-align: left;
+    overflow: hidden;
+}
+
+.tabs {
+    display: flex;
+    background-color: #fff;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 10px 5px;
+    background: var(--tab-inactive);
+    border: none;
+    border-right: 1px solid var(--border-color);
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    transition: background-color 0.2s, color 0.2s;
+    color: var(--secondary-color);
+}
+
+.tab-btn:last-child {
+    border-right: none;
+}
+
+.tab-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.tab-btn:hover:not(.active) {
+    background-color: #dee2e6;
+}
+
+.tab-content {
+    padding: 15px;
+}
+
+.results h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.result-item {
+    margin-bottom: 12px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.result-item strong {
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.result-item ul {
+    margin-top: 8px;
+    margin-left: 20px;
+}
+
+.result-item li {
+    margin-bottom: 4px;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--secondary-color);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

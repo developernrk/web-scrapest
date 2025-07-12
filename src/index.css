@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+  /* Custom scrollbar styles */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #c5c5c5;
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #a0a0a0;
+  }
+
+/* Custom styles that extend Tailwind */
+@layer components {
+  .container {
+    @apply w-[400px] min-h-[300px] p-5 bg-white shadow-md;
+  }
+
+  .analyze-btn {
+    @apply block w-full py-3 px-4 bg-primary text-white border-none rounded cursor-pointer text-base font-semibold transition-colors duration-300 mb-5 hover:bg-primary-dark disabled:bg-secondary disabled:cursor-not-allowed;
+  }
+
+  .error {
+    @apply text-error bg-red-50 p-2.5 rounded mb-4 text-center;
+  }
+
+  .dev-notice {
+    @apply bg-yellow-100 text-yellow-800 p-2 rounded mb-4 text-center text-sm;
+  }
+
+  .results {
+    @apply bg-background border border-border rounded text-left overflow-hidden;
+  }
+
+  .tabs {
+    @apply flex bg-white border-b border-border;
+  }
+
+  .tab-btn {
+    @apply flex-1 py-2.5 px-1 bg-gray-100 border-none border-r border-border cursor-pointer text-xs font-medium transition-colors duration-200 text-secondary last:border-r-0;
+  }
+
+  .tab-btn.active {
+    @apply bg-primary text-white;
+  }
+
+  .tab-btn:hover:not(.active) {
+    @apply bg-gray-200;
+  }
+
+  .tab-content {
+    @apply p-4;
+  }
+
+  .result-item {
+    @apply mb-3 text-sm leading-relaxed;
+  }
+
+  .result-item strong {
+    @apply text-secondary font-semibold;
+  }
+
+  .result-item ul {
+    @apply mt-2 ml-5;
+  }
+
+  .result-item li {
+    @apply mb-1;
+  }
+}
