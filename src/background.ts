@@ -15,6 +15,8 @@ chrome.runtime.onInstalled.addListener((details) => {
   }
 });
 
+
+
 // Listen for messages from popup or content scripts
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.action === 'getTabInfo') {
